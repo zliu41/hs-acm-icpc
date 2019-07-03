@@ -1,0 +1,20 @@
+name: world-finals2019
+
+default-extensions:
+- BlockArguments
+- OverloadedStrings
+- TypeApplications
+
+dependencies:
+- base
+- containers
+
+library:
+  source-dirs: src
+
+executables:
+  traffic-blights:
+    main:                Main.hs
+    source-dirs:         app/TrafficBlights
+    dependencies:
+    - alg

@@ -1,0 +1,15 @@
+resolver: lts-13.26
+
+ghc-options:
+  "$locals":
+    -threaded
+    -rtsopts
+    -with-rtsopts=-T
+    -Wall
+    -Wincomplete-uni-patterns
+    -Werror
+  "$everything":
+    -O2
+
+packages:
+- world-finals/2019
