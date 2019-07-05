@@ -5,10 +5,12 @@ default-extensions:
 - LambdaCase
 - OverloadedStrings
 - TypeApplications
+- ViewPatterns
 
 dependencies:
 - base
 - containers
+- extra
 - safe
 - vector
 
@@ -19,6 +21,12 @@ executables:
   beautiful-bridges:
     main:                Main.hs
     source-dirs:         app/BeautifulBridges
+    dependencies:
+      - world-finals2019
+
+  circular-dna:
+    main:                Main.hs
+    source-dirs:         app/CircularDNA
     dependencies:
       - world-finals2019
 
