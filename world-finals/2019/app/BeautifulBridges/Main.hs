@@ -4,7 +4,7 @@ module Main (main) where
 
 import Control.Monad (replicateM)
 
-import BeautifulBridges
+import BeautifulBridges.DP
 
 main :: IO ()
 main = do

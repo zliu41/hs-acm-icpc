@@ -1,4 +1,5 @@
-module BeautifulBridges where
+-- | Dynamic programming solution
+module BeautifulBridges.DP where
 
 import Data.List as List
 import Data.Maybe (catMaybes)
@@ -29,11 +30,10 @@ beautifulBridges ground h α β = V.head memo
         where
           (x,_) = ground' ! i
           (dx,dy) = (x'-x, h-y')
-          (inf',sup')
-            | dy*2 > dx = (inf,sup)
-            | otherwise = let (r1,r2) = (2*(dx+dy), sqrt(fromIntegral (8*dx*dy) :: Double))
-                           -- r1±r2 are the roots of (x-dx)^2 + (x-dy)^2 = x^2.
-                           in (max inf (r1 - floor r2), min sup (r1 + floor r2))
+          inf' = if dy*2 > dx then inf else max inf (r1 - floor r2)
+          sup' = min sup (r1 + floor r2)
+          -- r1±r2 are the roots of (x-dx)^2 + (x-dy)^2 = x^2.
+          (r1,r2) = (2*(dx+dy), sqrt(fromIntegral (8*dx*dy) :: Double))
 
     cost i x' = α*(h-y) + β*d*d
       where (x,y) = ground' ! i
