@@ -2,12 +2,16 @@ name: world-finals2019
 
 default-extensions:
 - BlockArguments
+- FlexibleContexts
 - LambdaCase
 - OverloadedStrings
+- ScopedTypeVariables
+- TupleSections
 - TypeApplications
 - ViewPatterns
 
 dependencies:
+- array
 - base
 - containers
 - extra
@@ -27,6 +31,12 @@ executables:
   circular-dna:
     main:                Main.hs
     source-dirs:         app/CircularDNA
+    dependencies:
+      - world-finals2019
+
+  first-of-her-name:
+    main:                Main.hs
+    source-dirs:         app/FirstOfHerName
     dependencies:
       - world-finals2019
 
