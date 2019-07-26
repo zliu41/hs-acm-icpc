@@ -5,7 +5,7 @@ module Main (main) where
 import Control.Monad (replicateM)
 import Data.Foldable (traverse_)
 
-import FirstOfHerName.Simple
+import FirstOfHerName.RadixSort
 
 main :: IO ()
 main = do

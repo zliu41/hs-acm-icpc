@@ -17,6 +17,7 @@ dependencies:
 - extra
 - safe
 - vector
+- vector-algorithms
 
 library:
   source-dirs: src
